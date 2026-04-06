@@ -1,26 +1,24 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: 160px; /* было 183px — слишком большой разрыв */
+  gap: 183px;
 }
 
 .content-section {
   width: 100%;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
-/* ==================== HEADER ==================== */
 .header {
   display: grid;
   grid-template-columns: 1.51fr 2fr 1.5fr;
   align-items: center;
-  padding: 40px 50px 40px; /* уменьшил вертикальные отступы для более плотного вида */
+  padding: 92px 51px 89px;
 }
 
 .header__links-list {
   display: flex;
-  gap: 40px; /* чуть увеличил для лучшего распределения */
+  gap: 32px;
 }
 
 .header__links-list-item {
@@ -75,13 +73,11 @@ main {
 .address__address-text {
   font-size: 18px;
   line-height: 1.35;
-  margin-top: 8px;
 }
 
-/* ==================== COVER ==================== */
 .cover {
   position: relative;
-  padding: 170px 50px 120px; /* подогнал под типичный макет */
+  padding: 165px 50px 50px 50px;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -94,7 +90,7 @@ main {
   z-index: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.6000000238418579;
   background-color: #000000;
 }
 
@@ -103,12 +99,12 @@ main {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 12px; /* уменьшил расстояние между строками заголовка */
+  gap: 20px;
   color: #FFF;
   font-weight: bold;
   font-size: 100px;
-  line-height: 1.05; /* очень важный параметр для больших заголовков */
-  letter-spacing: -2px; /* лёгкое сжатие, часто используется в макетах */
+  line-height: 1.15;
+  letter-spacing: 30px;
   text-transform: uppercase;
 }
 
@@ -127,8 +123,10 @@ main {
 }
 
 .letter-spacing-extended {
-  letter-spacing: 55px; /* подогнал под визуальное совпадение */
+  letter-spacing: 30px;
 }
+
+/* Убирает ненужный отступ в конце слова, создаваемый свойством letter-spacing всего элемента */
 
 .remove-spacing {
   letter-spacing: normal;
@@ -140,8 +138,8 @@ main {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 70px;
-  margin-top: 180px; /* основной отступ от заголовка до описания */
+  gap: 78px;
+  padding: 136px 0 0;
 }
 
 .cover__description-text {
@@ -149,7 +147,7 @@ main {
   font-size: 22px;
   line-height: 1.27;
   text-transform: uppercase;
-  word-spacing: 12px; /* уменьшил, чтобы текст выглядел плотнее */
+  word-spacing: 18px;
 }
 
 .bet-button {
@@ -170,13 +168,12 @@ main {
   background-color: #FFF;
 }
 
-/* ==================== LOTS ==================== */
 .lots {
   padding: 0 50px;
 }
 
 .lots__heading {
-  padding: 0 0 40px 40px; /* увеличил отступ снизу */
+  padding: 0 0 30px 40px;
   font-weight: bold;
   font-size: 40px;
   line-height: 1;
@@ -187,7 +184,6 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 25px;
-  row-gap: 0;
   list-style: none;
 }
 
@@ -205,16 +201,29 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 25px; /* уменьшил внутренний отступ между title и text */
+  gap: 30px;
   width: auto;
   height: 100%;
   padding: 50px 40px;
-  box-sizing: border-box;
 }
 
-.card_type_film { background-image: url(../images/card-lot-01.jpg); background-repeat: no-repeat; background-size: cover; }
-.card_type_book { background-image: url(../images/card-lot-02.jpg); background-repeat: no-repeat; background-size: cover; }
-.card_type_picture { background-image: url(../images/card-lot-03.jpg); background-repeat: no-repeat; background-size: cover; }
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .card__title {
   position: relative;
@@ -222,7 +231,7 @@ main {
   color: #FFF;
   font-weight: bold;
   font-size: 22px;
-  line-height: 1.15; /* плотнее */
+  line-height: 1.2;
   text-decoration-line: underline;
   text-transform: uppercase;
 }
@@ -232,19 +241,18 @@ main {
   z-index: 1;
   color: #FFF;
   font-size: 20px;
-  line-height: 1.25; /* чуть увеличил для лучшей читаемости */
+  line-height: 1.2;
 }
 
 .lots__look-more-link {
   display: block;
-  margin: 45px 0 0 40px;
+  margin: 30px 0 0 40px;
   font-size: 20px;
   text-decoration-line: underline;
   text-underline-position: under;
   width: fit-content;
 }
 
-/* ==================== ABOUT ==================== */
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -257,7 +265,7 @@ main {
 }
 
 .about__column_text {
-  grid-column: 2 / 4;
+  grid-column: 2/4;
 }
 
 .about__logo {
@@ -275,7 +283,7 @@ main {
 }
 
 .about__title {
-  padding: 80px 0 60px; /* уменьшил отступы сверху/снизу */
+  padding: 100px 0 104px;
   font-weight: bold;
   font-size: 40px;
   line-height: 1;
@@ -285,19 +293,18 @@ main {
 .about__text {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* увеличил расстояние между абзацами */
+  gap: 25px;
 }
 
 .about__text p {
   font-size: 20px;
-  line-height: 1.4; /* более комфортный межстрочный для длинного текста */
+  line-height: normal;
 }
 
-/* ==================== FOOTER ==================== */
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 120px 50px 80px; /* уменьшил верхний отступ */
+  padding: 180px 50px 80px;
 }
 
 .footer__social-icon {
