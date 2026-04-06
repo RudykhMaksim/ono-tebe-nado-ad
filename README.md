@@ -1,1 +1,1 @@
-https://github.com/RudykhMaksim/ono-tebe-nado-ad
+https://github.com/RudykhMaksim/ono-tebe-nado-fd
